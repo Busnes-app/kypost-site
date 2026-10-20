@@ -36,7 +36,7 @@
             const path_to_root = "../";
             const default_light_theme = "patina-ky";
             const default_dark_theme = "patina-ky";
-            window.path_to_searchindex_js = "../searchindex-ec5be782.js";
+            window.path_to_searchindex_js = "../searchindex-dc9c6364.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc-d1d12269.js"></script>
@@ -208,7 +208,7 @@
 <h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
 <ul>
 <li>Xcode 26, deployment target macOS and iOS 26.5.</li>
-<li>A running relay backend (live deployment behind Cloudflare at <code>mail.urlxl.com</code>).</li>
+<li>A running relay backend (your own KyPost-Server deployment).</li>
 <li>For push: an APNs key on the backend.</li>
 <li>SwiftData, URLSession and WebKit. One external dependency: <strong>GopenPGP</strong>, consumed as a checksummed binary XCFramework through the local package in <code>Dependencies/GopenPGP</code>. It is built from source by <code>.github/workflows/gopenpgp-xcframework.yml</code> from the upstream tag pinned in <code>Dependencies/gopenpgp.env</code>, using upstream’s own <code>build.sh</code>, and <code>Package.swift</code> pins its SHA-256 so the bytes cannot change without that line changing. Nothing outside <code>KyPost/Domain/Security/PgpCrypto.swift</code> and its conforming types may reference the library.</li>
 </ul>

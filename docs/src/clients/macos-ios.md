@@ -35,7 +35,7 @@ Name is KyPost everywhere (Dock, Home Screen, About, permission prompts, Xcode p
 ## Requirements
 
 - Xcode 26, deployment target macOS and iOS 26.5.
-- A running relay backend (live deployment behind Cloudflare at `mail.urlxl.com`).
+- A running relay backend (your own KyPost-Server deployment).
 - For push: an APNs key on the backend.
 - SwiftData, URLSession and WebKit. One external dependency: **GopenPGP**, consumed as a checksummed binary XCFramework through the local package in `Dependencies/GopenPGP`. It is built from source by `.github/workflows/gopenpgp-xcframework.yml` from the upstream tag pinned in `Dependencies/gopenpgp.env`, using upstream's own `build.sh`, and `Package.swift` pins its SHA-256 so the bytes cannot change without that line changing. Nothing outside `KyPost/Domain/Security/PgpCrypto.swift` and its conforming types may reference the library.
 
