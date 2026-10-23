@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "patina-ky";
             const default_dark_theme = "patina-ky";
-            window.path_to_searchindex_js = "searchindex-dc9c6364.js";
+            window.path_to_searchindex_js = "searchindex-03866301.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-d1d12269.js"></script>
@@ -240,7 +240,7 @@ confirmation dialog shows the user <code>srv</code>.</p>
 <li>Deep link <code>kypost://native-pair?...</code> registers the device and stores credentials in the Keychain.</li>
 <li>Until you pair, the inbox shows a prompt that points to Settings → Connection.</li>
 <li>TOFU certificate pinning at first pairing; re-pair in Settings → Connection if the cert changes.</li>
-<li>Bundle IDs and the Keychain access group stay <code>com.urlxl.mail</code> on purpose; only the user-facing name and the deep-link scheme are KyPost.</li>
+<li>The bundle ID and the Keychain access group are <code>org.kysecurity.mail</code>, renamed from <code>com.urlxl.mail</code>. Keychain items a pre-rename development build stored are not migrated.</li>
 </ul>
 <h3 id="linux"><a class="header" href="#linux">Linux</a></h3>
 <ul>

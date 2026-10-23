@@ -59,7 +59,7 @@ A `PAIRING_SECRET` shorter than 32 bytes disables pairing, pickup links, and PGP
 - Deep link `kypost://native-pair?...` registers the device and stores credentials in the Keychain.
 - Until you pair, the inbox shows a prompt that points to Settings → Connection.
 - TOFU certificate pinning at first pairing; re-pair in Settings → Connection if the cert changes.
-- Bundle IDs and the Keychain access group stay `com.urlxl.mail` on purpose; only the user-facing name and the deep-link scheme are KyPost.
+- The bundle ID and the Keychain access group are `org.kysecurity.mail`, renamed from `com.urlxl.mail`. Keychain items a pre-rename development build stored are not migrated.
 
 ### Linux
 
