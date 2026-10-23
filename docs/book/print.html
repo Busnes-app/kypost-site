@@ -37,7 +37,7 @@
             const path_to_root = "";
             const default_light_theme = "patina-ky";
             const default_dark_theme = "patina-ky";
-            window.path_to_searchindex_js = "searchindex-dc9c6364.js";
+            window.path_to_searchindex_js = "searchindex-03866301.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-d1d12269.js"></script>
@@ -870,7 +870,7 @@ npx wrangler deploy
 <h2 id="which-client-for-which-platform"><a class="header" href="#which-client-for-which-platform">Which client for which platform</a></h2>
 <ul>
 <li><strong>Android</strong> — <code>kypost-android</code>, package <code>org.kysecurity.mail</code>, FCM or UnifiedPush + pull fallback. The package rename is breaking for existing installs.</li>
-<li><strong>macOS &amp; iOS</strong> — <code>kypost-for-Mac</code>, bundle <code>com.urlxl.mail</code>, SwiftUI shared codebase, APNs + polling.</li>
+<li><strong>macOS &amp; iOS</strong> — <code>kypost-for-Mac</code>, bundle <code>org.kysecurity.mail</code>, SwiftUI shared codebase, APNs + polling.</li>
 <li><strong>Linux</strong> — <code>kypost-Linux</code>, app id <code>com.kysecurity.mail</code>, KDE Plasma and Plasma Mobile, Qt6/Kirigami Flatpak, UnifiedPush + polling.</li>
 </ul>
 <h2 id="common-traits"><a class="header" href="#common-traits">Common traits</a></h2>
@@ -910,7 +910,7 @@ npx wrangler deploy
 </div>
 <h2 id="bundle-and-naming"><a class="header" href="#bundle-and-naming">Bundle and naming</a></h2>
 <ul>
-<li>The Mac README says the app name is KyPost everywhere (Dock, Home Screen, About, permission prompts, project and scheme, deep link). Bundle IDs and Keychain group stay <code>com.urlxl.mail</code> on purpose. Renaming them is a separate high-risk step. See <code>Brand_Refresh_KyPost.md</code>.</li>
+<li>The Mac README says the app name is KyPost everywhere (Dock, Home Screen, About, permission prompts, project and scheme, deep link). The bundle ID and Keychain access group are <code>org.kysecurity.mail</code>, renamed from <code>com.urlxl.mail</code> on 2026-08-27 before any build was released. See <code>SECURITY.md</code> in that repo.</li>
 <li>Android app ID is <code>org.kysecurity.mail</code>. Existing installs of <code>com.urlxl.mail</code> must reinstall, pair again, and re-enrol any device-held PGP identity.</li>
 <li>Linux app ID is <code>com.kysecurity.mail</code>, renamed from <code>com.urlxl.mail</code>. See <code>docs/RENAME_NOTES.md</code> in that repo.</li>
 </ul>
@@ -1025,7 +1025,7 @@ expected signer. Never build a release for distribution from a workstation.</p>
 <h1 id="macos--ios-client"><a class="header" href="#macos--ios-client">macOS &amp; iOS Client</a></h1>
 <h2 id="what-it-is-1"><a class="header" href="#what-it-is-1">What it is</a></h2>
 <p>A native SwiftUI mail client for macOS and iOS. It connects only to the KyPost mail relay. No direct IMAP or SMTP. One QR code or deep-link pairing registers the device. The relay then handles mail, keyword tabs, push, and contact sync.</p>
-<p>Name is KyPost everywhere (Dock, Home Screen, About, permission prompts, Xcode project, scheme, folders, deep link <code>kypost://</code>). Bundle IDs and Keychain group stay <code>com.urlxl.mail</code> on purpose. See <code>Brand_Refresh_KyPost.md</code>.</p>
+<p>Name is KyPost everywhere (Dock, Home Screen, About, permission prompts, Xcode project, scheme, folders, deep link <code>kypost://</code>). The bundle ID and Keychain access group are <code>org.kysecurity.mail</code>, matching the Android client. They were <code>com.urlxl.mail</code> until the identifier rename on 2026-08-27, before any build was released. See <code>SECURITY.md</code> in that repo.</p>
 <h2 id="features-1"><a class="header" href="#features-1">Features</a></h2>
 <ul>
 <li><strong>Inbox with keyword tabs</strong> — relay sorts mail into tabs and labels. Set tab visibility in settings.</li>
@@ -1224,7 +1224,7 @@ confirmation dialog shows the user <code>srv</code>.</p>
 <li>Deep link <code>kypost://native-pair?...</code> registers the device and stores credentials in the Keychain.</li>
 <li>Until you pair, the inbox shows a prompt that points to Settings → Connection.</li>
 <li>TOFU certificate pinning at first pairing; re-pair in Settings → Connection if the cert changes.</li>
-<li>Bundle IDs and the Keychain access group stay <code>com.urlxl.mail</code> on purpose; only the user-facing name and the deep-link scheme are KyPost.</li>
+<li>The bundle ID and the Keychain access group are <code>org.kysecurity.mail</code>, renamed from <code>com.urlxl.mail</code>. Keychain items a pre-rename development build stored are not migrated.</li>
 </ul>
 <h3 id="linux-1"><a class="header" href="#linux-1">Linux</a></h3>
 <ul>
