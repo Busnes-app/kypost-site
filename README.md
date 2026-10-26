@@ -6,10 +6,10 @@ paired with native, relay-only clients for Android, iOS, macOS, and Linux.
 This repo is just the marketing site. The actual products live in their own
 repos:
 
-- [KyPost Server](https://github.com/Busness-app/KyPost-Server) — self-hosted IMAP/SMTP web client with local-AI keyword labeling
-- [KyPost for Android](https://github.com/Busness-app/KyPost-for-Android)
-- [KyPost for Mac & iOS](https://github.com/Busness-app/KyPost-for-Mac)
-- [KyPost for Linux](https://github.com/Busness-app/KyPost-for-Linux)
+- [KyPost Server](https://github.com/Busnes-app/KyPost-Server) — self-hosted IMAP/SMTP web client with local-AI keyword labeling
+- [KyPost for Android](https://github.com/Busnes-app/KyPost-for-Android)
+- [KyPost for Mac & iOS](https://github.com/Busnes-app/KyPost-for-Mac)
+- [KyPost for Linux](https://github.com/Busnes-app/KyPost-for-Linux)
 
 ## What's here
 
@@ -28,7 +28,7 @@ docs/            mdbook — src/ is the source, book/ is the committed build
 ## The architecture map
 
 `/architecture/` is the only part of this repo that isn't hand-written. It is
-built by [KyData](https://github.com/Busness-app/KyData) from a JSON
+built by KyData from a JSON
 description of the KyPost repos, and it is committed here because the site has
 no build step.
 
