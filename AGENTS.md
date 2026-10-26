@@ -20,6 +20,7 @@ Own the public KyPost marketing pages, privacy notice and generated reference pa
 
 ## Work Guidance
 
+- Follow `CONTRIBUTING.md` for compiler/linter warning handling.
 - Add automated regression checks with major new functionality.
 - Keep checks dependency-free and offline; run external-link checks separately when a destination changes.
 
