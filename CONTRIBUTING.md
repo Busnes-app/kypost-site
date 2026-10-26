@@ -27,6 +27,10 @@ self-check.
 
 ## Verification
 
+Run `python3 -m unittest discover -s tests -v`. Add automated regression checks
+with major new functionality, and update [CHANGELOG.md](CHANGELOG.md) for
+user-visible or security-related changes.
+
 Validate Markdown and HTML links and asset paths, and run any site build or
 lint before opening the pull request. Record the exact commands and results in
 the pull request.

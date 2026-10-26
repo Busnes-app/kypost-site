@@ -25,6 +25,29 @@ architecture/    Generated — the interactive architecture map (see below)
 docs/            mdbook — src/ is the source, book/ is the committed build
 ```
 
+## Checks and versions
+
+Run `python3 -m unittest discover -s tests -v` with Python 3.9 or newer. The
+suite checks `index.html` and `privacy.html`, verifies their local page/asset
+destinations, and rejects known misspelled suite repository links. It does not
+fetch external websites or recursively check the generated documentation/map.
+GitHub Actions runs it on pushes and pull requests. Add automated regression
+checks with major new functionality; browser and accessibility checks still
+apply when changing the pages.
+
+Each source revision is identified by its full Git commit SHA. There are
+currently no packaged or SemVer-tagged site releases. Record the deployed SHA
+and consult [CHANGELOG.md](CHANGELOG.md); update those notes for user-visible
+or security-related changes.
+
+## Website interface
+
+Open [index.html](index.html) to browse the product overview and links to the
+server, native clients, architecture map and documentation book. The
+[privacy notice](privacy.html) explains the website's handling of data. This
+repository serves static pages and assets; application APIs, accounts and mail
+belong to the separately linked product repositories.
+
 ## The architecture map
 
 `/architecture/` is the only part of this repo that isn't hand-written. It is
