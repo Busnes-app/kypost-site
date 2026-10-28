@@ -97,3 +97,9 @@ first — check it against them rather than against itself.
 MIT, developed by Matthew Beacher d/b/a Busnes.app
 
 [![OctoCounts](https://api.octocounts.com/badge/Busnes-app/kypost-site/branch/master)](https://octocounts.com/github/Busnes-app/kypost-site/tree/master)
+
+## Documentation
+
+- [Contributing](CONTRIBUTING.md) — how to propose a change and what it must pass.
+- [Security policy](SECURITY.md) — how to report a vulnerability privately.
+- [Website changes](CHANGELOG.md) — what changed in each published revision of the site.
