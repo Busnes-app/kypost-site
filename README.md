@@ -1,5 +1,7 @@
 # KyPost Site
 
+[![OctoCounts](https://api.octocounts.com/badge/Busnes-app/kypost-site/branch/master)](https://octocounts.com/github/Busnes-app/kypost-site/tree/master)
+
 The landing page for the KyPost email ecosystem — a self-hosted mail server
 paired with native, relay-only clients for Android, iOS, macOS, and Linux.
 
